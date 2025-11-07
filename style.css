@@ -1,3 +1,6 @@
+/* ======== GOOGLE FONT IMPORT (FOR LATEX FONT) ======== */
+@import url('https://fonts.googleapis.com/css2?family=Latin+Modern+Roman&display=swap');
+
 /* ======== GLOBAL "TRON" STYLES ======== */
 
 /* Define our theme colors */
@@ -6,7 +9,7 @@
     --color-dark-blue: #0a192f; /* A very dark, deep blue */
     --color-light-gray: #ccc;   /* Main text color */
     --color-white: #ffffff;
-    --color-tron-blue: #00CFFC; /* The bright, electric blue */
+    --color-tron-blue: #00A9CC; /* CHANGED: Darker, less glowing blue */
 }
 
 /* Basic reset */
@@ -16,7 +19,6 @@
     box-sizing: border-box;
 }
 
-/* This makes the page scroll smoothly when you click a nav link */
 html {
     scroll-behavior: smooth;
 }
@@ -35,7 +37,7 @@ h1, h2, h3 {
 
 h2 {
     font-size: 2.5rem;
-    /* This creates the glowing blue underline for section titles */
+    /* This creates the blue underline for section titles */
     border-bottom: 2px solid var(--color-tron-blue);
     display: inline-block;
     padding-bottom: 5px;
@@ -44,6 +46,7 @@ h2 {
 section {
     /* Each section has space */
     padding: 100px 10%; /* 100px top/bottom, 10% left/right */
+    min-height: 60vh; /* Give sections some breathing room */
 }
 
 a {
@@ -52,22 +55,19 @@ a {
     transition: all 0.3s ease;
 }
 
-/* Add a glow effect on hover */
 a:hover {
     color: var(--color-white);
-    text-shadow: 0 0 10px var(--color-tron-blue);
+    /* REMOVED: text-shadow glow */
 }
 
 /* ======== HEADER & NAVIGATION ======== */
 header {
-    background-color: var(--color-black); /* CHANGED */
+    background-color: var(--color-black);
     padding: 1rem 10%;
-    /* This makes the nav bar stick to the top */
     position: sticky;
     top: 0;
     width: 100%;
     z-index: 10;
-    /* A subtle blue line under the nav */
     border-bottom: 1px solid var(--color-tron-blue);
 }
 
@@ -96,9 +96,8 @@ nav a {
     font-weight: bold;
 }
 
-/* ======== HERO SECTION ======== */
+/* ======== HERO SECTION (HOMEPAGE) ======== */
 #hero {
-    /* This makes the hero section fill the screen */
     height: 90vh;
     display: flex;
     flex-direction: column;
@@ -114,6 +113,7 @@ nav a {
 #hero p {
     font-size: 1.5rem;
     margin-bottom: 30px;
+    max-width: 600px; /* Constrain the text width */
 }
 
 .cta-button {
@@ -131,31 +131,69 @@ nav a {
 }
 
 /* ======== PROJECT PAGE STYLES ======== */
-
-#projects-page {
-    /* We can re-use the 'section' padding, but add more if we like */
-    padding: 100px 10%;
-}
-
 .project-item {
-    background-color: var(--color-dark-blue); /* A dark blue background for each project */
+    background-color: var(--color-dark-blue); 
     padding: 25px;
-    margin-bottom: 30px; /* Space between projects */
-    border-left: 4px solid var(--color-tron-blue); /* A 'Tron' accent line */
+    margin-bottom: 30px; 
+    border-left: 4px solid var(--color-tron-blue); 
     border-radius: 5px;
 }
 
 .project-item h3 {
-    color: var(--color-tron-blue); /* Make the project titles glow blue */
+    color: var(--color-tron-blue); 
     margin-bottom: 10px;
 }
+
+/* ADDED: LaTeX Font Style */
+.project-item p {
+    font-family: 'Latin Modern Roman', serif;
+    font-size: 1.1rem;
+    color: var(--color-light-gray);
+}
+
+
+/* ======== INTERESTS PAGE STYLES ======== */
+.interest-item {
+    background-color: var(--color-dark-blue);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border-left: 4px solid var(--color-tron-blue);
+}
+
+.interest-item h3 {
+    color: var(--color-tron-blue);
+    margin-bottom: 10px;
+}
+
+/* ======== CONTACT PAGE STYLES ======== */
+.contact-links {
+    margin-top: 40px;
+}
+
+.contact-links a {
+    display: inline-block;
+    margin: 10px 20px 10px 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: 2px solid var(--color-tron-blue);
+    border-radius: 5px;
+}
+
+.contact-links a:hover {
+    background-color: var(--color-tron-blue);
+    color: var(--color-dark-blue);
+    text-shadow: none;
+}
+
 
 /* ======== FOOTER ======== */
 footer {
     text-align: center;
     padding: 30px;
-    background-color: var(--color-black); /* CHANGED */
-    color: #8892b0; /* A muted gray-blue */
+    background-color: var(--color-black);
+    color: #8892b0; 
     margin-top: 50px;
     border-top: 1px solid var(--color-tron-blue);
 }
