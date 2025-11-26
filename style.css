@@ -299,3 +299,33 @@ footer {
 @media (prefers-reduced-motion: reduce) {
     * { transition: none !important; animation: none !important; transform: none !important; }
 }
+
+/* --- Fix: robust heading spacing & paragraph margins --- */
+
+/* Make sure headings always have clear top and bottom spacing */
+h1, h2, h3 {
+  display: block;
+  margin-top: 1.25rem;    /* ensures heading sits below previous block */
+  margin-bottom: 0.75rem; /* consistent gap after heading */
+}
+
+/* Slightly more room between paragraphs and headings */
+#project-detail p,
+#projects-page p,
+#experience-page p {
+  margin-bottom: 1rem;
+}
+
+/* Ensure lists are spaced correctly when used after a paragraph */
+#project-detail ul,
+#projects-page ul,
+#experience-page ul {
+  margin: 0.6rem 0 1rem 1.15rem; /* top, right, bottom, left */
+  padding-left: 1rem;
+}
+
+/* Make sure h3's are visually distinct on smaller screens too */
+@media (max-width: 900px) {
+  h3 { margin-top: 0.9rem; margin-bottom: 0.5rem; }
+  #project-detail p, #projects-page p { margin-bottom: 0.9rem; }
+}
