@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Biomimicry of Fish Locomotion — Adarsh Pai</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">Adarsh Pai</div>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html" class="active">Projects</a></li>
+        <li><a href="interests.html">Interests</a></li>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <section id="project-detail">
+        <h2>Biomimicry of Fish Locomotion</h2>
+
+        <div class="project-image-placeholder">Image Placeholder</div>
+
+        <p><strong>Summary —</strong> This is my undergraduate research on replicating fish-like locomotion with morphing foils. The aim was practical and conceptual: show whether chordwise trailing-edge morphing can consistently improve thrust and efficiency, and build a small, explainable modelling framework that links kinematics to propulsive metrics. The work blends simulation (ALE-based 2D models), analysis (DMD of wakes), and a bit of hands-on validation.</p>
+
+        <h3>Approach / Methods</h3>
+        <p>I built an ALE (Arbitrary Lagrangian–Eulerian) 2D model to simulate a morphing–pitching–heaving foil. Instead of trusting a black-box solver, I kept the setup intentionally simple so trends could be interpreted physically. I explored a range of morphing amplitudes and phase offsets, examined time-averaged thrust and power coefficients, and ran DMD (Dynamic Mode Decomposition) on wake snapshots to identify dominant coherent structures when a morphing foil interacts with upstream wakes.</p>
+
+        <h3>Key Results</h3>
+        <p>Across cases, morphing increased thrust up to ~31% and improved propulsive efficiency by around 12% in the parameter ranges we tested. The DMD analysis revealed that morphing alters the phase relationship between the foil motion and wake shedding, which explains why the thrust/efficiency trends were robust across flow conditions. Tandem simulations showed that placing a morphing foil downstream can exploit the upstream foil's wake to further boost propulsive effectiveness — a small hint at why fish schools might gain hydrodynamic advantages.</p>
+
+        <h3>Challenges & Trade-offs</h3>
+        <p>Modeling morphing requires careful meshing and timestep control because the trailing edge motion can generate numerical instability if handled poorly. Balancing mesh deformability (for accuracy) with solver robustness (for runtime) was the main challenge. Physically, morphing increases instantaneous power demand during certain phases, so net efficiency improvements depend on the timing of morphing relative to heave/pitch.</p>
+
+        <h3>What I learned</h3>
+        <p>I learned to design simulations so that trends are interpretable rather than just providing numbers. I also gained intuition on phase effects — small timing shifts between morph and pitch can flip whether morphing helps or hurts. The project strengthened my CFD skills (ALE frameworks, DMD) and deepened my appreciation for how simple, bio-inspired rules can produce robust performance gains.</p>
+
+        <p>
+          <a href="projects.html" class="project-button">Back to Projects</a>
+          <a href="fish-locomotion-data.zip" class="project-button" style="margin-left:10px;">Download (raw snapshots)</a>
+        </p>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 Adarsh Pai. Built from scratch.</p>
+  </footer>
+</body>
+</html>
