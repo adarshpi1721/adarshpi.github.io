@@ -249,3 +249,51 @@ footer {
     color: #8892b0;
     border-top: 1px solid var(--color-tron-blue);
 }
+
+/* ===== Image sizing fixes ===== */
+
+/* Ensure project cards never overflow their content */
+.project-item {
+  position: relative; /* keep stacking context */
+  overflow: hidden;   /* crop any oversized children */
+}
+
+/* Thumbnails used in the project grid (compact, consistent height) */
+.project-item .project-image {
+  display: block;
+  width: 100%;
+  height: auto;            /* keep aspect ratio */
+  max-height: 220px;      /* limit height in the grid */
+  object-fit: cover;      /* crop if needed to fill the box nicely */
+  border-radius: 8px;
+  margin: 0 0 18px 0;
+  border: 1px solid rgba(0,123,255,0.18);
+}
+
+/* For small screens, reduce thumbnail height */
+@media (max-width: 720px) {
+  .project-item .project-image {
+    max-height: 160px;
+  }
+}
+
+/* Allow a larger image on the dedicated project detail page */
+#project-detail .project-image {
+  max-height: 640px;      /* large but bounded so it doesn't explode */
+  width: 100%;
+  height: auto;
+  object-fit: contain;    /* show full image without cropping on the detail page */
+  margin: 12px 0 24px 0;
+}
+
+/* If you ever use an inline modal / lightbox in future, keep it above the grid */
+.lightbox,
+.project-detail-modal {
+  z-index: 9999;
+}
+
+/* Optional: smooth transition when image loads/resizes */
+.project-image {
+  transition: transform 160ms ease, opacity 160ms ease;
+}
+
