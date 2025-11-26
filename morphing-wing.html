@@ -30,13 +30,13 @@
         <p><strong>Summary —</strong> This project merges two interconnected threads: using chordwise trailing-edge morphing to actively tune a flapping foil’s camber, and understanding how fish-like tandem arrangements exploit wakes. The work uses ALE-based 2D simulations, DMD wake analysis, and targeted bench checks. Results show morphing can raise thrust by ~31% and improve propulsive efficiency by ~12% in tested cases.</p>
 
         <h3>Approach</h3>
-        <p>I used a deliberately simple ALE 2D modeling framework to keep physics interpretable. Key steps were:
+
+        <p>I used a deliberately simple ALE 2D modeling framework to keep physics interpretable. Key steps were:</p>
         <ul>
-          <li>Define a baseline pitching–heaving kinematic; add morphing as an extra DOF (amplitude + phase).</li>
+          <li>Define a baseline pitching–heaving kinematic; add morphing as an extra degree of freedom (amplitude + phase).</li>
           <li>Perform parameter sweeps (morph amplitude, phase offset, reduced frequency) and compute time-averaged thrust, lift, and power coefficients.</li>
           <li>Run tandem-foil cases to examine downstream responses and use DMD on snapshots to extract coherent wake structures.</li>
         </ul>
-        </p>
 
         <h3>Key findings</h3>
         <p>
