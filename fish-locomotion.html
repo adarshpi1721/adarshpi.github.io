@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Biomimicry of Fish Locomotion — Adarsh Pai</title>
+  <title>Morphing Foils — Biomimicry of Fish Locomotion — Adarsh Pai</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -23,27 +23,44 @@
   <main>
     <div class="container">
       <section id="project-detail">
-        <h2>Biomimicry of Fish Locomotion</h2>
+        <h2>Morphing Foils — Biomimicry of Fish Locomotion</h2>
 
         <div class="project-image-placeholder">Image Placeholder</div>
 
-        <p><strong>Summary —</strong> This is my undergraduate research on replicating fish-like locomotion with morphing foils. The aim was practical and conceptual: show whether chordwise trailing-edge morphing can consistently improve thrust and efficiency, and build a small, explainable modelling framework that links kinematics to propulsive metrics. The work blends simulation (ALE-based 2D models), analysis (DMD of wakes), and a bit of hands-on validation.</p>
+        <p><strong>Summary —</strong> This project merges two interconnected threads: using chordwise trailing-edge morphing to actively tune a flapping foil’s camber, and understanding how fish-like tandem arrangements exploit wakes. The work uses ALE-based 2D simulations, DMD wake analysis, and targeted bench checks. Results show morphing can raise thrust by ~31% and improve propulsive efficiency by ~12% in tested cases.</p>
 
-        <h3>Approach / Methods</h3>
-        <p>I built an ALE (Arbitrary Lagrangian–Eulerian) 2D model to simulate a morphing–pitching–heaving foil. Instead of trusting a black-box solver, I kept the setup intentionally simple so trends could be interpreted physically. I explored a range of morphing amplitudes and phase offsets, examined time-averaged thrust and power coefficients, and ran DMD (Dynamic Mode Decomposition) on wake snapshots to identify dominant coherent structures when a morphing foil interacts with upstream wakes.</p>
+        <h3>Approach</h3>
+        <p>I used a deliberately simple ALE 2D modeling framework to keep physics interpretable. Key steps were:
+        <ul>
+          <li>Define a baseline pitching–heaving kinematic; add morphing as an extra DOF (amplitude + phase).</li>
+          <li>Perform parameter sweeps (morph amplitude, phase offset, reduced frequency) and compute time-averaged thrust, lift, and power coefficients.</li>
+          <li>Run tandem-foil cases to examine downstream responses and use DMD on snapshots to extract coherent wake structures.</li>
+        </ul>
+        </p>
 
-        <h3>Key Results</h3>
-        <p>Across cases, morphing increased thrust up to ~31% and improved propulsive efficiency by around 12% in the parameter ranges we tested. The DMD analysis revealed that morphing alters the phase relationship between the foil motion and wake shedding, which explains why the thrust/efficiency trends were robust across flow conditions. Tandem simulations showed that placing a morphing foil downstream can exploit the upstream foil's wake to further boost propulsive effectiveness — a small hint at why fish schools might gain hydrodynamic advantages.</p>
+        <h3>Key findings</h3>
+        <p>
+          - Morph timing matters: morphing that reinforces thrust-producing vortices on the downstroke yields net gains.<br>
+          - Gains were robust across moderate Reynolds number ranges sampled; tandem configurations showed potential for further boost by placing a morphing foil downstream of a flapping leader.<br>
+          - DMD showed that morphing shifts dominant wake modes and phase relationships, explaining the robustness of thrust trends.
+        </p>
 
-        <h3>Challenges & Trade-offs</h3>
-        <p>Modeling morphing requires careful meshing and timestep control because the trailing edge motion can generate numerical instability if handled poorly. Balancing mesh deformability (for accuracy) with solver robustness (for runtime) was the main challenge. Physically, morphing increases instantaneous power demand during certain phases, so net efficiency improvements depend on the timing of morphing relative to heave/pitch.</p>
+        <h3>Publications & status</h3>
+        <p>
+          - Presented: <em>Propulsion of Combined Morphing–Pitching–Heaving Foil</em>, FMFP ’24 (Adarsh Pai, Vaibhav Joshi, Shibu Clement).<br>
+          - Manuscript: <em>Active flexibility via chordwise trailing-edge morphing can enhance the propulsive performance of a flapping foil</em> — submitted to Physics of Fluids.
+        </p>
+
+        <h3>Practical challenges</h3>
+        <p>Numerically, mesh deformation and timestep selection required careful tuning to avoid instabilities from the moving trailing edge. Experimentally, actuation and power trade-offs (more actuators = more weight & power draw) must be balanced against aerodynamic gains.</p>
 
         <h3>What I learned</h3>
-        <p>I learned to design simulations so that trends are interpretable rather than just providing numbers. I also gained intuition on phase effects — small timing shifts between morph and pitch can flip whether morphing helps or hurts. The project strengthened my CFD skills (ALE frameworks, DMD) and deepened my appreciation for how simple, bio-inspired rules can produce robust performance gains.</p>
+        <p>This project taught me to marry interpretable simulation design with physical intuition. Often small timing changes flip outcomes — focusing on mechanism (wake timing, vortex formation) made the difference between a convincing result and an ambiguous one.</p>
 
         <p>
           <a href="projects.html" class="project-button">Back to Projects</a>
-          <a href="fish-locomotion-data.zip" class="project-button" style="margin-left:10px;">Download (raw snapshots)</a>
+          <a href="morphing-paper.pdf" class="project-button" style="margin-left:10px;">Download paper (FMFP)</a>
+          <a href="morphing-data.zip" class="project-button" style="margin-left:10px;">Data & snapshots</a>
         </p>
       </section>
     </div>
