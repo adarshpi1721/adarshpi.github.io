@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ytterbium Beam Collimation — Adarsh Pai</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">Adarsh Pai</div>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html" class="active">Projects</a></li>
+        <li><a href="interests.html">Interests</a></li>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <section id="project-detail">
+        <h2>Ytterbium Beam Collimation — Rarefied Gas Dynamics</h2>
+
+        <div class="project-image-placeholder">Image Placeholder</div>
+
+        <p><strong>Summary —</strong> For my thesis work at IIT Bombay I study how rarefied gas effects (Knudsen-number dependence) influence beam collimation for ytterbium sources. This work connects gas-kinetic behavior with practical beam shaping goals relevant to biomedical imaging and precision instrumentation.</p>
+
+        <h3>Approach</h3>
+        <p>I analyze beam properties using models that capture molecular mean-free-path effects, and run parametric simulations to see how background pressure, nozzle geometry, and source conditions change directionality and flux distribution. The project uses analytical theory where possible and particle-based or DSMC-like approaches where continuum assumptions break down.</p>
+
+        <h3>Preliminary findings</h3>
+        <p>Beam directionality and flux uniformity are very sensitive to Knudsen number near transitional regimes. Small geometric tweaks (nozzle lip shape, expansion chamber size) can significantly change beam spread. This suggests hardware-level optimizations are critical before attempting expensive optical correction schemes.</p>
+
+        <h3>Challenges & lessons</h3>
+        <p>Rarefied flows require different intuition than continuum CFD. Numerically, DSMC-style approaches are costly, so careful selection of reduced-order models and a hybrid approach (analytic + particle) is often necessary. I learned to combine approximate analytic models with targeted high-fidelity runs to get actionable guidance.</p>
+
+        <h3>What I learned</h3>
+        <p>The project expanded my understanding of multi-regime flow physics and taught me to balance theory, simulation cost, and practical objectives. It also exposed me to application-driven modeling constraints, which is useful for translational research.</p>
+
+        <p>
+          <a href="projects.html" class="project-button">Back to Projects</a>
+          <a href="ybic-notes.zip" class="project-button" style="margin-left:10px;">Thesis notes</a>
+        </p>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 Adarsh Pai. Built from scratch.</p>
+  </footer>
+</body>
+</html>
