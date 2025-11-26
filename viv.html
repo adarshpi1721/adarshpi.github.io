@@ -1,33 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adarsh Pai - VIV Suppression</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>VIV Suppression — Adarsh Pai</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">Adarsh Pai</div>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="interests.html">Interests</a></li>
-                <li><a href="experience.html">Experience</a></li> <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section id="project-detail">
-            <h2>Suppression of VIV for Cylinders Using Passive Methods</h2>
-            <p>(All the detailed information, images, videos, and technical specs for the VIV Suppression project go here.)</p>
-            <br>
-            <a href="projects.html" class="project-button">← Back to All Projects</a>
-        </section>
-    </main>
-    <footer>
-        <p>© 2025 Adarsh Pai. Built from scratch.</p>
-    </footer>
+  <header>
+    <nav>
+      <div class="logo">Adarsh Pai</div>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html" class="active">Projects</a></li>
+        <li><a href="interests.html">Interests</a></li>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <section id="project-detail">
+        <h2>Suppression of Vortex-Induced Vibrations (VIV)</h2>
+
+        <div class="project-image-placeholder">Image Placeholder</div>
+
+        <p><strong>Summary —</strong> This project looks at passive techniques to suppress vortex-induced vibrations of cylinders. I helped build a low-speed wind tunnel facility, validated it with airfoil and cylinder tests (accuracy up to ~96%), and developed an OpenFOAM solver to simulate 2D VIV. The goal was to pair experiments and simulations and test small passive add-ons that reduce oscillation amplitudes.</p>
+
+        <h3>Approach</h3>
+        <p>We combined experimental rig-building with CFD. The experiments collected time-resolved transverse displacement and force data, while the simulations reproduced the same inflow and geometric parameters to test candidate suppressors — e.g., splitter plates, small control cylinders, and passive roughness patterns downstream. The solver was tuned against experimental benchmarks first, then used for parameter sweeps.</p>
+
+        <h3>Key findings</h3>
+        <p>Several passive devices helped reduce vibration amplitude in certain Strouhal ranges. Splitter-plates worked reliably when sized and placed correctly, while small downstream control cylinders sometimes delayed lock-in. The numerical solver matched experiment trends closely enough to be useful for design screening — which saved time and allowed us to test more configurations than would be feasible experimentally.</p>
+
+        <h3>Challenges & lessons</h3>
+        <p>Accurately capturing the vortex dynamics requires careful time-stepping and mesh resolution; coarse setups can entirely miss lock-in behavior. The main practical lesson was the value of combining experiments and simulations — experiments revealed real-world nonlinearities (structural damping, support friction) and simulations allowed fast exploration of geometric parameter space.</p>
+
+        <h3>What I learned</h3>
+        <p>This project improved my experimental skills (wind-tunnel setup, instrumentation) and my CFD tuning abilities (meshing, solver validation). It also sharpened my engineering judgment about the trade-offs between suppression efficacy, structural complexity, and manufacturability.</p>
+
+        <p>
+          <a href="projects.html" class="project-button">Back to Projects</a>
+          <a href="viv-data.zip" class="project-button" style="margin-left:10px;">Data & scripts</a>
+        </p>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 Adarsh Pai. Built from scratch.</p>
+  </footer>
 </body>
 </html>
