@@ -1,73 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Morphing Foils — Biomimicry of Fish Locomotion — Adarsh Pai</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Morphing Foils – Biomimicry of Fish Locomotion – Adarsh Pai</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-  <header>
+<header>
     <nav>
-      <div class="logo">Adarsh Pai</div>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="projects.html" class="active">Projects</a></li>
-        <li><a href="interests.html">Interests</a></li>
-        <li><a href="experience.html">Experience</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <main>
-    <div class="container">
-      <section id="project-detail">
-        <h2>Morphing Foils — Biomimicry of Fish Locomotion</h2>
-
-        <div class="project-image-placeholder">Image Placeholder</div>
-
-        <p><strong>Summary —</strong> This project merges two interconnected threads: using chordwise trailing-edge morphing to actively tune a flapping foil’s camber, and understanding how fish-like tandem arrangements exploit wakes. The work uses ALE-based 2D simulations, DMD wake analysis, and targeted bench checks. Results show morphing can raise thrust by ~31% and improve propulsive efficiency by ~12% in tested cases.</p>
-
-        <h3>Approach</h3>
-
-        <p>I used a deliberately simple ALE 2D modeling framework to keep physics interpretable. Key steps were:</p>
+        <div class="logo">Adarsh Pai</div>
         <ul>
-          <li>Define a baseline pitching–heaving kinematic; add morphing as an extra degree of freedom (amplitude + phase).</li>
-          <li>Perform parameter sweeps (morph amplitude, phase offset, reduced frequency) and compute time-averaged thrust, lift, and power coefficients.</li>
-          <li>Run tandem-foil cases to examine downstream responses and use DMD on snapshots to extract coherent wake structures.</li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projects.html" class="active">Projects</a></li>
+            <li><a href="interests.html">Interests</a></li>
+            <li><a href="experience.html">Experience</a></li>
+            <li><a href="contact.html">Contact</a></li>
         </ul>
+    </nav>
+</header>
 
-        <h3>Key findings</h3>
-        <p>
-          - Morph timing matters: morphing that reinforces thrust-producing vortices on the downstroke yields net gains.<br>
-          - Gains were robust across moderate Reynolds number ranges sampled; tandem configurations showed potential for further boost by placing a morphing foil downstream of a flapping leader.<br>
-          - DMD showed that morphing shifts dominant wake modes and phase relationships, explaining the robustness of thrust trends.
-        </p>
+<main>
+    <div class="container">
+        <section id="project-detail">
 
-        <h3>Publications & status</h3>
-        <p>
-          - Presented: <em>Propulsion of Combined Morphing–Pitching–Heaving Foil</em>, FMFP ’24 (Adarsh Pai, Vaibhav Joshi, Shibu Clement).<br>
-          - Manuscript: <em>Active flexibility via chordwise trailing-edge morphing can enhance the propulsive performance of a flapping foil</em> — submitted to Physics of Fluids.
-        </p>
+            <h2>Morphing Foils — Biomimicry of Fish Locomotion</h2>
 
-        <h3>Practical challenges</h3>
-        <p>Numerically, mesh deformation and timestep selection required careful tuning to avoid instabilities from the moving trailing edge. Experimentally, actuation and power trade-offs (more actuators = more weight & power draw) must be balanced against aerodynamic gains.</p>
+            <!-- IMAGE ADDED HERE -->
+            <img src="images/morphing_wing.png"
+                 alt="Trailing-edge morphing foil simulation"
+                 class="project-image">
 
-        <h3>What I learned</h3>
-        <p>This project taught me to marry interpretable simulation design with physical intuition. Often small timing changes flip outcomes — focusing on mechanism (wake timing, vortex formation) made the difference between a convincing result and an ambiguous one.</p>
+            <p><strong>Summary —</strong>
+                This project merges two ideas: using trailing-edge morphing to actively tune flapping-foil kinematics, 
+                and understanding how fish use body flexibility to shape their wake. I built ALE-based 2D models to 
+                simulate morphing–pitching–heaving motion and explored how timing (phase), amplitude, and morph rate 
+                influence thrust, power, and wake structure. The main finding was that well-timed morphing can increase 
+                thrust by ~31% and efficiency by ~12%.
+            </p>
 
-        <p>
-          <a href="projects.html" class="project-button">Back to Projects</a>
-          <a href="morphing-paper.pdf" class="project-button" style="margin-left:10px;">Download paper (FMFP)</a>
-          <a href="morphing-data.zip" class="project-button" style="margin-left:10px;">Data & snapshots</a>
-        </p>
-      </section>
+            <h3>Approach</h3>
+            <p>
+                I developed a deliberately simple but physically interpretable ALE 2D model. The steps were:
+            </p>
+            <ul>
+                <li>Define a baseline pitching–heaving motion, then add morphing as an extra degree of freedom.</li>
+                <li>Run parametric sweeps on morph timing (phase), amplitude, and rate.</li>
+                <li>Analyze wake dynamics using DMD to see which modes strengthen or weaken propulsion.</li>
+                <li>Compare morphing runs against the non-morphing baseline to quantify gains.</li>
+            </ul>
+
+            <h3>Key findings</h3>
+            <p>
+                Morphing effectively reshapes the vortex pairing process, creating stronger reverse von Kármán wakes 
+                when timed correctly. Poorly timed morphing weakens thrust, so performance is extremely phase-sensitive. 
+                The strongest cases showed higher wake coherence and significantly improved force production.
+            </p>
+
+            <h3>What I learned</h3>
+            <p>
+                This project taught me how sensitive unsteady propulsion is to phase and geometry, and how small 
+                kinematic changes can completely reshape the wake. I also learned how to balance numerical modeling 
+                with physical intuition and how to use DMD to understand the “why” behind thrust improvements.
+            </p>
+
+            <a href="projects.html" class="project-button">← Back to Projects</a>
+
+        </section>
     </div>
-  </main>
+</main>
 
-  <footer>
+<footer>
     <p>© 2025 Adarsh Pai. Built from scratch.</p>
-  </footer>
+</footer>
+
 </body>
 </html>
