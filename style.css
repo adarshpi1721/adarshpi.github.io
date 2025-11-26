@@ -297,3 +297,75 @@ footer {
   transition: transform 160ms ease, opacity 160ms ease;
 }
 
+/* ===== Robust spacing fixes for headings, paragraphs, lists ===== */
+
+/* Make headings reserve space above & below them so layout is stable */
+#project-detail h1,
+#project-detail h2,
+#project-detail h3,
+#projects-page h1,
+#projects-page h2,
+#projects-page h3,
+#experience-page h1,
+#experience-page h2,
+#experience-page h3,
+#interests-page h1,
+#interests-page h2,
+#interests-page h3 {
+  display: block;
+  margin-top: 1.25rem;    /* space above heading */
+  margin-bottom: 0.6rem;  /* space below heading */
+}
+
+/* Ensure paragraph spacing is consistent and not collapsed under headings */
+#project-detail p,
+#projects-page p,
+#experience-page p,
+#interests-page p,
+.project-item p,
+.interest-body p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  line-height: 1.65;
+}
+
+/* Lists should have space above and below, not be glued to preceding text */
+#project-detail ul,
+#projects-page ul,
+#experience-page ul,
+#interests-page ul,
+.project-item ul {
+  margin: 0.6rem 0 1rem 1.15rem; /* top right bottom left */
+  padding-left: 1rem;
+}
+
+/* Make strong/inline labels behave like a separate mini-heading */
+#project-detail p strong,
+#experience-page p strong {
+  display: inline-block;
+  margin-bottom: 0.25rem;
+  font-weight: 700;
+}
+
+/* Make headings slightly larger and more readable on small screens */
+@media (max-width: 900px) {
+  #project-detail h3,
+  #projects-page h3,
+  #experience-page h3,
+  #interests-page h3 {
+    margin-top: 0.9rem;
+    margin-bottom: 0.5rem;
+    font-size: 1.05rem;
+  }
+  #project-detail p,
+  #experience-page p {
+    margin-bottom: 0.9rem;
+  }
+}
+
+/* Safety net: prevent accidental inline-wrapping issues */
+section > p + h3,
+section > p + h2 {
+  margin-top: 1.1rem;
+}
+
