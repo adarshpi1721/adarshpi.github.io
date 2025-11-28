@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>VIV Suppression — Adarsh Pai</title>
+  <title>Suppression of Vortex-Induced Vibrations — Adarsh Pai</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -27,24 +27,37 @@
 
         <div class="project-image-placeholder">Image Placeholder</div>
 
-        <p><strong>Summary —</strong> This project looks at passive techniques to suppress vortex-induced vibrations of cylinders. I helped build a low-speed wind tunnel facility, validated it with airfoil and cylinder tests (accuracy up to ~96%), and developed an OpenFOAM solver to simulate 2D VIV. The goal was to pair experiments and simulations and test small passive add-ons that reduce oscillation amplitudes.</p>
+        <p><strong>Summary —</strong>
+          This project focuses on reducing VIV of circular cylinders using passive control methods.
+          I worked on both the experimental setup (low-speed wind tunnel) and numerical simulations
+          using OpenFOAM, comparing different control geometries and their effect on lift, drag, and
+          vibration amplitude.
+        </p>
 
         <h3>Approach</h3>
-        <p>We combined experimental rig-building with CFD. The experiments collected time-resolved transverse displacement and force data, while the simulations reproduced the same inflow and geometric parameters to test candidate suppressors — e.g., splitter plates, small control cylinders, and passive roughness patterns downstream. The solver was tuned against experimental benchmarks first, then used for parameter sweeps.</p>
+        <p>
+          On the experimental side, I helped build and validate a low-speed wind tunnel and carried
+          out tests on cylinders and airfoils, achieving around 96% agreement with reference data.
+          On the numerical side, I implemented a 2D VIV solver in OpenFOAM and tested various passive
+          devices such as splitter plates and control cylinders.
+        </p>
 
-        <h3>Key findings</h3>
-        <p>Several passive devices helped reduce vibration amplitude in certain Strouhal ranges. Splitter-plates worked reliably when sized and placed correctly, while small downstream control cylinders sometimes delayed lock-in. The numerical solver matched experiment trends closely enough to be useful for design screening — which saved time and allowed us to test more configurations than would be feasible experimentally.</p>
-
-        <h3>Challenges & lessons</h3>
-        <p>Accurately capturing the vortex dynamics requires careful time-stepping and mesh resolution; coarse setups can entirely miss lock-in behavior. The main practical lesson was the value of combining experiments and simulations — experiments revealed real-world nonlinearities (structural damping, support friction) and simulations allowed fast exploration of geometric parameter space.</p>
+        <h3>Key observations</h3>
+        <p>
+          Some passive devices significantly reduced vibration amplitude but at the cost of higher
+          drag, while others provided a more balanced trade-off. The work highlighted how sensitive
+          VIV is to wake structure and how geometric changes can redirect or damp the unsteady loads
+          on the cylinder.
+        </p>
 
         <h3>What I learned</h3>
-        <p>This project improved my experimental skills (wind-tunnel setup, instrumentation) and my CFD tuning abilities (meshing, solver validation). It also sharpened my engineering judgment about the trade-offs between suppression efficacy, structural complexity, and manufacturability.</p>
-
         <p>
-          <a href="projects.html" class="project-button">Back to Projects</a>
-          <a href="viv-data.zip" class="project-button" style="margin-left:10px;">Data & scripts</a>
+          The project gave me experience in building a facility from scratch, validating it, and
+          connecting experimental observations with simulation results. It also reinforced how
+          important it is to understand wake physics when designing practical suppression strategies.
         </p>
+
+        <a href="projects.html" class="project-button">Back to Projects</a>
       </section>
     </div>
   </main>
