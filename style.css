@@ -130,33 +130,78 @@ nav a.active {
 
 /* ======== PROJECT PAGE ======== */
 
+/* ======== PROJECT PAGE (cards similar to interests) ======== */
+
 .project-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 24px;
 }
 
+/* Card style (mirrors interest-card but slightly denser) */
+.project-item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 18px 18px 20px;
+  border-radius: 12px;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.015),
+    rgba(0, 0, 0, 0.45)
+  );
+  border: 1px solid rgba(0, 123, 255, 0.10);
+  transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
+}
+
+.project-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(2, 6, 23, 0.65);
+  border-color: rgba(0, 123, 255, 0.35);
+}
+
+/* Title = Tron blue, slightly larger */
 .project-item h3 {
-    color: var(--color-tron-blue);
-    margin-bottom: 12px;
+  margin: 0 0 4px 0;
+  color: var(--color-tron-blue);
+  font-size: 1.15rem;
 }
 
+/* Optional one-line tagline under title */
+.project-tagline {
+  margin: 0 0 6px 0;
+  font-size: 0.95rem;
+  color: #9fb0ff;
+  font-style: italic;
+}
+
+/* Main project text */
+.project-item p {
+  font-size: 0.98rem;
+  color: var(--color-light-gray);
+  line-height: 1.65;
+}
+
+/* Button matches the rest of the site */
 .project-button {
-    display: inline-block;
-    margin-top: 15px;
-    padding: 8px 15px;
-    background: transparent;
-    border: 1px solid var(--color-tron-blue);
-    color: var(--color-tron-blue);
-    border-radius: 4px;
-    font-weight: bold;
-    transition: 0.3s ease;
+  align-self: flex-start;
+  margin-top: 6px;
+  padding: 8px 16px;
+  background: transparent;
+  border: 1px solid var(--color-tron-blue);
+  color: var(--color-tron-blue);
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .project-button:hover {
-    background-color: var(--color-tron-blue);
-    color: var(--color-dark-blue);
+  background-color: var(--color-tron-blue);
+  color: var(--color-dark-blue);
+  box-shadow: 0 0 0 1px rgba(0, 123, 255, 0.4);
 }
+
 
 /* ======== PROJECT IMAGES ======== */
 
