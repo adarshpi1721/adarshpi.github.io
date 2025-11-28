@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Adarsh Pai - Projects</title>
     <link rel="stylesheet" href="style.css" />
 </head>
@@ -27,53 +27,51 @@
 
                 <div class="project-grid">
 
-                    <!-- COMBINED: Morphing Foils + Biomimicry -->
+                    <!-- Morphing foils / biomimicry -->
                     <div class="project-item">
-                        <!-- replaced placeholder with your uploaded image -->
-                        <img src="images/morphing_wing.png" 
-                             alt="Morphing foil simulation" 
-                             class="project-image" />
                         <h3>Morphing Foils — Biomimicry of Fish Locomotion</h3>
-                        <p>
-                            Ongoing research combining chordwise trailing-edge morphing with pitching–heaving 
-                            motion to replicate fish-like locomotion and improve propulsion. Using ALE-based 
-                            2D models and DMD wake analysis, I studied how morph timing affects thrust, 
-                            efficiency, and wake structure. This work led to thrust increases of ~35% and 
-                            efficiency gains of ~12%, and was presented at FMFP ’24 and submitted to 
-                            Physics of Fluids.
+                        <p class="project-tagline">
+                            Fish-inspired flapping foils with chordwise morphing to boost thrust and efficiency.
                         </p>
-                        <a href="morphing-wing.html" class="project-button">View More Details</a>
+                        <p>
+                            Ongoing work on fish-like propulsion using trailing-edge morphing on a pitching–heaving foil.
+                            I built ALE-based 2D simulations and used DMD on the wake to understand how morph timing and
+                            amplitude affect thrust, efficiency, and vortex structure. In the best cases, we see roughly
+                            31% higher thrust and a cleaner reverse von Kármán wake.
+                        </p>
+                        <a href="morphing-wing.html" class="project-button">Read more</a>
                     </div>
 
                     <!-- Ornithopter -->
                     <div class="project-item">
-                        <div class="project-image-placeholder">Image Placeholder</div>
                         <h3>Ornithopter</h3>
-                        <p>
-                            Designed and built a dual-crank active flapping ornithopter inspired by 
-                            bird flight. After achieving controlled, repeatable kinematics, I added 
-                            trailing-edge morphing to boost thrust and stability. Result: a stable 
-                            7-second flight and lots of lessons about FSI in the real world.
+                        <p class="project-tagline">
+                            A dual-crank flapping-wing aircraft where I first started experimenting with morphing wings.
                         </p>
-                        <a href="ornithopter.html" class="project-button">View More Details</a>
+                        <p>
+                            Designed and built a bird-inspired ornithopter with a mechanically driven flapping mechanism.
+                            Once we had a stable and repeatable flight, I added a simple trailing-edge morphing element
+                            to improve thrust and stability. We achieved a controlled 7-second flight and learned how
+                            sensitive real hardware is to timing, stiffness, and mass distribution.
+                        </p>
+                        <a href="ornithopter.html" class="project-button">Read more</a>
                     </div>
 
-                    <!-- VIV Suppression -->
+                    <!-- VIV suppression -->
                     <div class="project-item">
-                        <img src="images/viv.jpg" 
-                             alt="Morphing foil simulation" 
-                             class="project-image" />
                         <h3>Suppression of Vortex-Induced Vibrations (VIV)</h3>
-                        <p>
-                            I worked on passive VIV suppression techniques while helping build and validate 
-                            a low-speed wind tunnel (up to ~96% accuracy). I developed an OpenFOAM 
-                            solver for 2D VIV, explored passive devices like splitter plates and control cylinders, 
-                            and compared simulation trends with experimental data.
+                        <p class="project-tagline">
+                            Passive control strategies to reduce cylinder vibrations by reshaping the wake.
                         </p>
-                        <a href="viv.html" class="project-button">View More Details</a>
+                        <p>
+                            Worked on passive VIV control for circular cylinders. I helped build and validate a low-speed
+                            wind tunnel (up to ~96% agreement with reference data) and developed a 2D VIV solver in
+                            OpenFOAM. The project compared different passive devices and studied how they modify lift,
+                            drag, and vibration response by changing the wake.
+                        </p>
+                        <a href="viv.html" class="project-button">Read more</a>
                     </div>
 
-                    <!-- (optional) add more project cards below if needed -->
                 </div>
             </section>
         </div>
