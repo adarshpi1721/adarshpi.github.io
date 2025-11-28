@@ -172,11 +172,7 @@ nav a.active {
   margin: 0 0 8px 0;
   font-size: 0.95rem;
   font-style: italic;
-  color: #66ccff;
-  text-shadow:
-    0 0 6px rgba(102, 204, 255, 0.9),
-    0 0 14px rgba(0, 123, 255, 0.6),
-    0 0 24px rgba(0, 123, 255, 0.35);
+  color: #5fb3ff
 }
 
 
