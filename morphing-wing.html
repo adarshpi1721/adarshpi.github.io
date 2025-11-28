@@ -1,79 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Morphing Foils – Biomimicry of Fish Locomotion – Adarsh Pai</title>
-    <link rel="stylesheet" href="style.css" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Morphing Foils – Biomimicry of Fish Locomotion – Adarsh Pai</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
-<header>
+  <header>
     <nav>
-        <div class="logo">Adarsh Pai</div>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="projects.html" class="active">Projects</a></li>
-            <li><a href="interests.html">Interests</a></li>
-            <li><a href="experience.html">Experience</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
+      <div class="logo">Adarsh Pai</div>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html" class="active">Projects</a></li>
+        <li><a href="interests.html">Interests</a></li>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
     </nav>
-</header>
+  </header>
 
-<main>
+  <main>
     <div class="container">
-        <section id="project-detail">
+      <section id="project-detail">
+        <h2>Morphing Foils — Biomimicry of Fish Locomotion</h2>
 
-            <h2>Morphing Foils — Biomimicry of Fish Locomotion</h2>
+        <img src="images/morphing_wing.png"
+             alt="Trailing-edge morphing foil simulation"
+             class="project-image" />
 
-            <!-- IMAGE ADDED HERE -->
-            <img src="images/morphing_wing.png"
-                 alt="Trailing-edge morphing foil simulation"
-                 class="project-image">
+        <p><strong>Summary —</strong>
+          This project looks at how chordwise trailing-edge morphing can improve the propulsive
+          performance of a flapping foil. I used an ALE-based 2D solver to combine morphing with
+          pitching–heaving motion, and studied how morph timing and amplitude affect thrust,
+          efficiency, and wake structure. Well-timed morphing produced gains of roughly 31% in
+          thrust and noticeable improvements in efficiency.
+        </p>
 
-            <p><strong>Summary —</strong>
-                This project merges two ideas: using trailing-edge morphing to actively tune flapping-foil kinematics, 
-                and understanding how fish use body flexibility to shape their wake. I built ALE-based 2D models to 
-                simulate morphing–pitching–heaving motion and explored how timing (phase), amplitude, and morph rate 
-                influence thrust, power, and wake structure. The main finding was that well-timed morphing can increase 
-                thrust by ~31% and efficiency by ~12%.
-            </p>
+        <h3>Approach</h3>
+        <p>
+          I started with a baseline pitching–heaving kinematic and added morphing as an additional,
+          controllable degree of freedom. I then:
+        </p>
+        <ul>
+          <li>Ran parametric sweeps over morph amplitude and phase relative to the heaving motion.</li>
+          <li>Computed time-averaged thrust, lift, and power coefficients for each case.</li>
+          <li>Used DMD on wake snapshots to understand which flow modes were strengthened or weakened by morphing.</li>
+        </ul>
 
-            <h3>Approach</h3>
-            <p>
-                I developed a deliberately simple but physically interpretable ALE 2D model. The steps were:
-            </p>
-            <ul>
-                <li>Define a baseline pitching–heaving motion, then add morphing as an extra degree of freedom.</li>
-                <li>Run parametric sweeps on morph timing (phase), amplitude, and rate.</li>
-                <li>Analyze wake dynamics using DMD to see which modes strengthen or weaken propulsion.</li>
-                <li>Compare morphing runs against the non-morphing baseline to quantify gains.</li>
-            </ul>
+        <h3>Key findings</h3>
+        <p>
+          The main result was that morph timing is critical: morphing that reinforces the formation
+          of thrust-producing vortices can significantly boost performance, while poorly timed
+          morphing can actually hurt thrust. The wake structure in the best cases showed a stronger
+          and more coherent reverse von Kármán street.
+        </p>
 
-            <h3>Key findings</h3>
-            <p>
-                Morphing effectively reshapes the vortex pairing process, creating stronger reverse von Kármán wakes 
-                when timed correctly. Poorly timed morphing weakens thrust, so performance is extremely phase-sensitive. 
-                The strongest cases showed higher wake coherence and significantly improved force production.
-            </p>
+        <h3>What I learned</h3>
+        <p>
+          This project taught me how sensitive unsteady propulsion is to phase relationships, and
+          how small changes in geometry and timing can completely change the wake. It also gave me
+          experience in building interpretable CFD setups and using modal analysis tools like DMD to
+          explain why a given configuration performs better.
+        </p>
 
-            <h3>What I learned</h3>
-            <p>
-                This project taught me how sensitive unsteady propulsion is to phase and geometry, and how small 
-                kinematic changes can completely reshape the wake. I also learned how to balance numerical modeling 
-                with physical intuition and how to use DMD to understand the “why” behind thrust improvements.
-            </p>
-
-            <a href="projects.html" class="project-button">← Back to Projects</a>
-
-        </section>
+        <a href="projects.html" class="project-button">Back to Projects</a>
+      </section>
     </div>
-</main>
+  </main>
 
-<footer>
+  <footer>
     <p>© 2025 Adarsh Pai. Built from scratch.</p>
-</footer>
-
+  </footer>
 </body>
 </html>
