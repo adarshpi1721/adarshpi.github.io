@@ -23,28 +23,41 @@
   <main>
     <div class="container">
       <section id="project-detail">
-        <h2>Ornithopter — active flapping design</h2>
+        <h2>Ornithopter</h2>
 
         <div class="project-image-placeholder">Image Placeholder</div>
 
-        <p><strong>Summary —</strong> I led the design and build of a small active flapping ornithopter. The goal was hands-on: design a robust dual-crank mechanism that can produce repeatable, controllable flapping kinematics, integrate simple morphing at the trailing edge, and learn what physical design choices actually matter in real flight (not just on paper).</p>
+        <p><strong>Summary —</strong>
+          This project started as an attempt to build a controllable flapping-wing aircraft and
+          turned into a practical lesson in taking FSI ideas into hardware. I led the design of a
+          dual-crank mechanism to generate bird-like flapping and later added a simple morphing
+          mechanism at the trailing edge to improve thrust and stability.
+        </p>
 
         <h3>Approach</h3>
-        <p>We started with a mechanical dual-crank design for reliable amplitude and phase control. Prototyping was iterative: laser-cut frames, 3D-printed joints, and a compact actuation setup using hobby servos and a lightweight transmission. After achieving mechanically repeatable motion on the bench, we added an active trailing-edge morphing element to study its effect on thrust and stability in free flight tests.</p>
+        <p>
+          We first focused on getting a robust mechanical system: repeatable flapping kinematics,
+          acceptable structural stiffness, and a reasonable weight budget. Once the basic
+          ornithopter flew, I experimented with small morphing elements at the wing trailing edge
+          and adjusted flapping frequency and amplitude to see how they affected thrust and control.
+        </p>
 
-        <h3>Flight tests & outcomes</h3>
-        <p>Initial bench tests confirmed the kinematics were close to the target profiles. In flight, the ornithopter achieved a documented 7-second stable flight during test conditions with calm winds. The morphing trailing edge improved controllability during takeoff and slightly increased thrust during the downstroke, which matched trends predicted by our CFD work.</p>
-
-        <h3>Challenges & practical lessons</h3>
-        <p>Flight testing exposed everything — slight asymmetries in build, misaligned linkages, and servo backlash. The biggest lesson was that mechanical precision and repeatability matter more than theoretical elegance when you want repeatable flights. Weight management was critical; we had to iterate on material choice and packing geometry to keep the aircraft light while maintaining structural stiffness.</p>
+        <h3>Key observations</h3>
+        <p>
+          Even small changes in flexibility and timing made a noticeable difference in flight
+          stability and climb capability. The project highlighted how sensitive flapping systems are
+          to inertia, stiffness, and timing, and how control is tightly coupled to aerodynamics.
+        </p>
 
         <h3>What I learned</h3>
-        <p>This project taught me systems thinking — how mechanical design, kinematics, material choices, and control all interact. It reinforced the value of rapid iteration: build small, test, learn, and refine. The ornithopter is where my interest in biomimicry moved from simulation to physical validation.</p>
-
         <p>
-          <a href="projects.html" class="project-button">Back to Projects</a>
-          <a href="ornithopter-data.zip" class="project-button" style="margin-left:10px;">Build notes & logs</a>
+          This is where my interest in biomimicry and unsteady aerodynamics really began. It taught
+          me how different real hardware feels compared to idealized models, and how important it is
+          to design mechanisms and experiments that are simple enough to debug but rich enough to
+          show interesting physics.
         </p>
+
+        <a href="projects.html" class="project-button">Back to Projects</a>
       </section>
     </div>
   </main>
